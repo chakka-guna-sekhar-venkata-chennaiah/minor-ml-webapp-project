@@ -205,7 +205,8 @@ def eda():
     if status=='Sweetviz':
         if st.button('Analyze'):
             report=sv.analyze(df[['Gender']])
-            st.write(report.show_html(),unsafe_allow_html=True)
+	    html_report=report.get_st_html()
+            components.html(html_report,width=900, height=700, scrolling=True)
             
 
             if df is not None:
