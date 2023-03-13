@@ -202,7 +202,7 @@ def eda():
     if status=='Sweetviz':
         if st.button('Analyze'):
             report=sv.analyze(df)
-            st.markdown(report.show_html(), unsafe_allow_html=True)
+            report.show_html('eda.html',open_browser=True)
             if df is not None:
                 
                 
