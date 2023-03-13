@@ -1622,15 +1622,15 @@ def non_tuning_vs_tuning():
 
             # Set the x-axis labels and tick marks
             ax.set_xticks(pos)
-            ax.set_xticklabels(ac_labels, rotation=45, ha='right',fontsize=20,color='white')
+            ax.set_xticklabels(ac_labels, rotation=45, ha='right',fontsize=20,color='black')
 
             # Set the y-axis label and limit
-            ax.set_ylabel('Accuracy Score',fontsize=20,color='white')
+            ax.set_ylabel('Accuracy Score',fontsize=20,color='black')
             ax.set_ylim([0, 100])
-            ax.tick_params(axis='y',labelsize=20,colors='white')
+            ax.tick_params(axis='y',labelsize=20,colors='black')
 
             # Set the plot title and legend
-            ax.set_title('Comparison of all algorithms accuracy',color='white',fontsize=30)
+            ax.set_title('Comparison of all algorithms accuracy',color='black',fontsize=30)
             ax.legend(fontsize=18)
 
             # Add labels for the bar heights
