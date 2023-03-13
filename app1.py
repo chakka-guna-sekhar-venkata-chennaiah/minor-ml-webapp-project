@@ -221,8 +221,9 @@ def eda():
                 st.warning('File not found')
     elif status=='Pandas Profiling Report':
         if st.button('Report'):
-            profile = ProfileReport(df[['Gender']])
-			st_profile_report(profile)
+	   
+	    profile = ProfileReport(df[['Gender']])
+	    st_profile_report(profile)
             if df is not None:
                 
                 
@@ -245,6 +246,7 @@ def model_building():
                     If any of them are not activated, the results may not appear as expected. We recommend ensuring that all checkboxes and buttons are properly activated before proceeding.''')
   
     if True:
+		
         pass
         
         st.session_state.model_building=1
