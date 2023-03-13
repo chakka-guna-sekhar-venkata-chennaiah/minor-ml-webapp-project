@@ -193,7 +193,7 @@ def eda():
     if 'eda' not in st.session_state:
         st.session_state.eda=0
     
-    sub1=['Sweetviz']
+    sub1=['Sweetviz','Pandas Profiling Report']
     st.subheader("Perform Exploratory data Analysis with sweetviz Library")
     #data_file= st.file_uploader("Upload a csv file", type=["csv"])
     df=pd.read_csv('LoanApprovalPrediction.csv')
@@ -202,7 +202,27 @@ def eda():
     if status=='Sweetviz':
         if st.button('Analyze'):
             report=sv.analyze(df)
-            report.show_html('eda.html',open_browser=True)
+            report.show_html()
+            st_display_sweetviz("SWEETVIZ_REPORT.html")
+
+            if df is not None:
+                
+                
+                st.header('*User Input DataFrame*')
+                st.write(df)
+                st.write('---')
+                st.subheader('*Exploratory Data Analysis Report Using Sweetviz*')
+                report = sv.analyze(df[['Gender']])
+                report_html=report.show_html()
+                st.components.v1.html(report_html, height=700, scrolling=True)
+                st.session_state.eda=1
+                            
+            else:
+                st.warning('File not found')
+    elif status=='Pandas Profiling Report':
+        if st.button('Report'):
+            profile = ProfileReport(df[['Gender']])
+			st_profile_report(profile)
             if df is not None:
                 
                 
