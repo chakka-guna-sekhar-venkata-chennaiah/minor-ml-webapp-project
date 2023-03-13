@@ -39,10 +39,7 @@ from sklearn.utils import estimator_html_repr
 from xgboost import XGBClassifier
 
 
-def st_display_sweetviz(report_html,width=1000,height=500):
-	report_file = codecs.open(report_html,'r')
-	page = report_file.read()
-	components.html(page,width=width,height=height,scrolling=True)
+
 
 def generated_hashes(password):
     return hashlib.sha256(str.encode(password)).hexdigest()
@@ -208,8 +205,8 @@ def eda():
     if status=='Sweetviz':
         if st.button('Analyze'):
             report=sv.analyze(df[['Gender']])
-            report.show_html()
-            st_display_sweetviz("SWEETVIZ_REPORT.html")
+            st.write(report.show_html(),unsafe_allow_html=True)
+            
 
             if df is not None:
                 
