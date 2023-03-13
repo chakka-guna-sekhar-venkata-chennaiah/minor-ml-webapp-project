@@ -202,7 +202,7 @@ def eda():
     if status=='Sweetviz':
         if st.button('Analyze'):
             report=sv.analyze(df)
-            st.write(report.show_html(), unsafe_allow_html=True)
+            st.markdown(report.show_html(), unsafe_allow_html=True)
             if df is not None:
                 
                 
@@ -1622,15 +1622,15 @@ def non_tuning_vs_tuning():
 
             # Set the x-axis labels and tick marks
             ax.set_xticks(pos)
-            ax.set_xticklabels(ac_labels, rotation=45, ha='right',fontsize=20)
+            ax.set_xticklabels(ac_labels, rotation=45, ha='right',fontsize=20,color='white')
 
             # Set the y-axis label and limit
-            ax.set_ylabel('Accuracy Score',fontsize=20)
+            ax.set_ylabel('Accuracy Score',fontsize=20,color='white')
             ax.set_ylim([0, 100])
-            ax.tick_params(axis='y',labelsize=20)
+            ax.tick_params(axis='y',labelsize=20,color='white')
 
             # Set the plot title and legend
-            ax.set_title('Comparison of all algorithms accuracy',fontsize=30)
+            ax.set_title('Comparison of all algorithms accuracy',fontsize=30,color='white')
             ax.legend(fontsize=18)
 
             # Add labels for the bar heights
