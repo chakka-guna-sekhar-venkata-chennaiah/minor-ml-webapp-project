@@ -2,7 +2,7 @@ import os
 import pandas as pd
 import streamlit as st
 import sweetviz as sv
-from pandas_profiling import ProfileReport 
+ 
 import streamlit.components.v1 as components
 import codecs
 from sklearn.metrics import roc_auc_score,roc_curve
