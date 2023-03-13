@@ -221,7 +221,7 @@ def eda():
                 st.write('---')
                 st.subheader('*Exploratory Data Analysis Report Using Sweetviz*')
                 #report = sv.analyze(df)
-                condition = df['Gender'] == 'Male'
+                #condition = df['Gender'] == 'Male'
 
     # Generate Sweetviz report comparing subsets based on condition
                 report = sv.analyze(df)
@@ -229,6 +229,7 @@ def eda():
 
                 report_html=report.show_html()
                 st.components.v1.html(report_html, height=700, scrolling=True)
+		
                 st.session_state.eda=1
                             
             else:
