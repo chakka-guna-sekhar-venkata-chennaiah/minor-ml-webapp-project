@@ -2,7 +2,7 @@ import os
 import pandas as pd
 import streamlit as st
 import sweetviz as sv
-from pandas_profiling import ProfileReport 
+
 import streamlit.components.v1 as components
 import codecs
 from sklearn.metrics import roc_auc_score,roc_curve
@@ -210,7 +210,7 @@ def eda():
             report=sv.analyze(df[['Gender']])
             html_report=report.get_st_html()
             components.html(html_report,width=900, height=700, scrolling=True)
-            st_display_sweetviz("SWEETVIZ_REPORT.html")
+            
 
             if df is not None:
                 
