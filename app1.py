@@ -805,8 +805,8 @@ def deploying_without_tuning():
 
                 #ax.yaxis.label.set_color('white')
                 #ax.xaxis.label.set_color('white')
-                for label in ax.get_xticklabels() + ax.get_yticklabels():
-                    label.set_color('black')
+                #for label in ax.get_xticklabels() + ax.get_yticklabels():
+                   # label.set_color('black')
 
                 rects1 = ax.bar(pos - width/2, ac_scores_before_tuning_sorted, width, label='Before Tuning',color='red')
                 ax.set_xticks(pos)
@@ -1417,8 +1417,8 @@ def deploying_with_tuning():
 
                 #ax.yaxis.label.set_color('white')
                 #ax.xaxis.label.set_color('white')
-                for label in ax.get_xticklabels() + ax.get_yticklabels():
-                    label.set_color('black')
+                #for label in ax.get_xticklabels() + ax.get_yticklabels():
+                 #   label.set_color('black')
 
                 rects1 = ax.bar(pos - width/2, ac_scores_before_tuning_sorted, width, label='After Tuning')
                 ax.set_xticks(pos)
@@ -1622,15 +1622,15 @@ def non_tuning_vs_tuning():
 
             # Set the x-axis labels and tick marks
             ax.set_xticks(pos)
-            ax.set_xticklabels(ac_labels, rotation=45, ha='right',fontsize=20,color='black')
+            ax.set_xticklabels(ac_labels, rotation=45, ha='right',fontsize=20)
 
             # Set the y-axis label and limit
-            ax.set_ylabel('Accuracy Score',fontsize=20,color='black')
+            ax.set_ylabel('Accuracy Score',fontsize=20)
             ax.set_ylim([0, 100])
-            ax.tick_params(axis='y',labelsize=20,colors='black')
+            ax.tick_params(axis='y',labelsize=20)
 
             # Set the plot title and legend
-            ax.set_title('Comparison of all algorithms accuracy',color='black',fontsize=30)
+            ax.set_title('Comparison of all algorithms accuracy',fontsize=30)
             ax.legend(fontsize=18)
 
             # Add labels for the bar heights
