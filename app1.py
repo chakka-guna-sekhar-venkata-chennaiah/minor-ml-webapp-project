@@ -822,10 +822,7 @@ def deploying_without_tuning():
                 
                 ax.tick_params(axis='y',labelsize=30)
 
-                ax.yaxis.label.set_color('black')
-                ax.xaxis.label.set_color('black')
-                for label in ax.get_xticklabels() + ax.get_yticklabels():
-                    label.set_color('black')
+                
 
                 rects1 = ax.bar(pos - width/2, ac_scores_before_tuning_sorted, width, label='Before Tuning',color='red')
                 ax.set_xticks(pos)
@@ -1434,10 +1431,7 @@ def deploying_with_tuning():
                 ax.tick_params(axis='x')
                 ax.tick_params(axis='y')
 
-                ax.yaxis.label.set_color('black')
-                ax.xaxis.label.set_color('black')
-                for label in ax.get_xticklabels() + ax.get_yticklabels():
-                    label.set_color('black')
+               
 
                 rects1 = ax.bar(pos - width/2, ac_scores_before_tuning_sorted, width, label='After Tuning')
                 ax.set_xticks(pos)
