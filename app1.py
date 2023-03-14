@@ -822,10 +822,10 @@ def deploying_without_tuning():
                 
                 ax.tick_params(axis='y',labelsize=30)
 
-                #ax.yaxis.label.set_color('white')
-                #ax.xaxis.label.set_color('white')
-                #for label in ax.get_xticklabels() + ax.get_yticklabels():
-                   # label.set_color('black')
+                ax.yaxis.label.set_color('white')
+                ax.xaxis.label.set_color('white')
+                for label in ax.get_xticklabels() + ax.get_yticklabels():
+                    label.set_color('white')
 
                 rects1 = ax.bar(pos - width/2, ac_scores_before_tuning_sorted, width, label='Before Tuning',color='red')
                 ax.set_xticks(pos)
@@ -833,7 +833,7 @@ def deploying_without_tuning():
                 ax.tick_params(axis='x',labelsize=30)
                 
 
-                ax.set_ylabel('Accuracy Score',size=40)
+                ax.set_ylabel('Accuracy Score',size=40,color='white')
                 ax.set_ylim([0, 100])
                 ax.set_title('Comparison of all algorithms',size=40)
                 ax.legend(fontsize=20)
@@ -1434,10 +1434,10 @@ def deploying_with_tuning():
                 ax.tick_params(axis='x')
                 ax.tick_params(axis='y')
 
-                #ax.yaxis.label.set_color('white')
-                #ax.xaxis.label.set_color('white')
-                #for label in ax.get_xticklabels() + ax.get_yticklabels():
-                 #   label.set_color('black')
+                ax.yaxis.label.set_color('white')
+                ax.xaxis.label.set_color('white')
+                for label in ax.get_xticklabels() + ax.get_yticklabels():
+                    label.set_color('white')
 
                 rects1 = ax.bar(pos - width/2, ac_scores_before_tuning_sorted, width, label='After Tuning')
                 ax.set_xticks(pos)
@@ -1447,7 +1447,7 @@ def deploying_with_tuning():
 
                 ax.set_ylabel('Accuracy Score',size=40)
                 ax.set_ylim([0, 100])
-                ax.set_title('Comparison of all algorithms accuracy',size=40)
+                ax.set_title('Comparison of all algorithms accuracy',size=40,color='white')
                 ax.legend(fontsize=20)
                 def autolabel(rects):
                     for rect in rects:
