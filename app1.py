@@ -833,7 +833,7 @@ def deploying_without_tuning():
                 ax.tick_params(axis='x',labelsize=30)
                 
 
-                ax.set_ylabel('Accuracy Score',size=40,color='white')
+                ax.set_ylabel('Accuracy Score',size=40)
                 ax.set_ylim([0, 100])
                 ax.set_title('Comparison of all algorithms',size=40)
                 ax.legend(fontsize=20)
@@ -1447,7 +1447,7 @@ def deploying_with_tuning():
 
                 ax.set_ylabel('Accuracy Score',size=40)
                 ax.set_ylim([0, 100])
-                ax.set_title('Comparison of all algorithms accuracy',size=40,color='white')
+                ax.set_title('Comparison of all algorithms accuracy',size=40)
                 ax.legend(fontsize=20)
                 def autolabel(rects):
                     for rect in rects:
